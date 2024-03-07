@@ -65,6 +65,16 @@ const defaultAnimationBuilder = (
     q.setFromEuler(new Euler(z, y, x, "ZYX")) // ! Possibly messed up order or signs
     return q
   }
+
+  // const x = data[0]
+  // const y = data[2]
+  // const z = data[1]
+  // return new Vector3(x, y, z)
+  // const x = -data[3]
+  // const y = -data[5]
+  // const z = -data[4]
+  // q.setFromEuler(new Euler(y, z, x, "YZX"))
+
   const generateKeyframeData = (posRotData: any[]): KeyframeData => {
     const positions: number[] = []
     const rotations: number[] = []
@@ -76,13 +86,15 @@ const defaultAnimationBuilder = (
     // !! NOTE: This is where posRotData gets converted!
 
     posRotData.forEach((data, index) => {
-      const pos_x = data[0] // ! Possibly messed up order or signs
+      // ! Possibly messed up order or signs
+      const pos_x = -data[0] // x reversed in Three wrt Unity
       const pos_z = data[1]
       const pos_y = data[2]
       positions.push(pos_x, pos_y, pos_z) // x, y, z
 
-      const rot_x = data[3] // ! Possibly messed up order or signs
-      const rot_y = data[4]
+      // ! Possibly messed up order or signs
+      const rot_x = data[3]
+      const rot_y = -data[4] // Yaw increases clockwise, but the others apparently don't.
       const rot_z = data[5]
 
       const q = new Quaternion()
