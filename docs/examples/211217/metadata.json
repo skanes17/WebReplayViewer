@@ -1,6 +1,6 @@
 {
   "gameMetadata": {
-    "id": "20B5CA874986F1B919264D9757C3D027",
+    "id": "211217",
     "name": "2019-10-14.02.53 Goose Ranked Doubles Loss",
     "map": "EuroStadium_Rainy_P",
     "version": 8,
@@ -83,7 +83,7 @@
     "length": 301.95220947265625,
     "gameServerId": "672146",
     "serverName": "OCE815313",
-    "matchGuid": "80F9E0AA11E9EDD0CC415BA96B37926C",
+    "matchGuid": "211217",
     "teamSize": 2,
     "playlist": "RANKED_DOUBLES"
   },
@@ -362,300 +362,6 @@
       "isBot": false,
       "timeInGame": 298.99432373046875,
       "firstFrameInGame": 1
-    },
-    {
-      "id": {
-        "id": "76561198162373110"
-      },
-      "name": "multipl3x",
-      "titleId": 43,
-      "score": 847,
-      "goals": 4,
-      "assists": 2,
-      "saves": 0,
-      "shots": 6,
-      "cameraSettings": {
-        "stiffness": 0.44999998807907104,
-        "height": 120.0,
-        "transitionSpeed": 1.2000000476837158,
-        "pitch": -6.0,
-        "swivelSpeed": 4.199999809265137,
-        "fieldOfView": 110.0,
-        "distance": 290.0
-      },
-      "loadout": {
-        "banner": 3631,
-        "boost": 63,
-        "car": 403,
-        "goalExplosion": 4378,
-        "skin": 508,
-        "trail": 1948,
-        "wheels": 4269,
-        "version": 24,
-        "topper": 0,
-        "antenna": 0,
-        "engineAudio": 3350,
-        "wheelsPaint": 4,
-        "primaryColor": 39,
-        "accentColor": 53,
-        "primaryFinish": 270,
-        "accentFinish": 270,
-        "avatarBorderUserColor": "16746496"
-      },
-      "isOrange": 1,
-      "stats": {
-        "boost": {
-          "boostUsage": 2402.787386042588,
-          "numSmallBoosts": 76,
-          "numLargeBoosts": 23,
-          "wastedCollection": 489.03668212890625,
-          "wastedUsage": 262.3396301269531,
-          "timeFullBoost": 20.638065338134766,
-          "timeLowBoost": 112.16524505615234,
-          "timeNoBoost": 31.144073486328125,
-          "numStolenBoosts": 3,
-          "averageBoostLevel": 116.36969757080078,
-          "wastedBig": 437.74859619140625,
-          "wastedSmall": 51.288063049316406
-        },
-        "distance": {
-          "ballHitForward": 87813.91002845764,
-          "ballHitBackward": 4200.270599365234,
-          "timeClosestToBall": 106.83903503417969,
-          "timeFurthestFromBall": 64.57469177246094,
-          "timeCloseToBall": 53.22672653198242
-        },
-        "possession": {
-          "possessionTime": 109.94683342100001,
-          "turnovers": 8,
-          "turnoversOnMyHalf": 2,
-          "turnoversOnTheirHalf": 5,
-          "wonTurnovers": 15
-        },
-        "positionalTendencies": {
-          "timeOnGround": 156.79876708984375,
-          "timeLowInAir": 120.82917022705078,
-          "timeHighInAir": 10.702239990234375,
-          "timeInDefendingHalf": 148.78421020507812,
-          "timeInAttackingHalf": 153.16798400878906,
-          "timeInDefendingThird": 93.63725280761719,
-          "timeInNeutralThird": 116.67442321777344,
-          "timeInAttackingThird": 91.64051818847656,
-          "timeBehindBall": 235.45831298828125,
-          "timeInFrontBall": 66.49388122558594,
-          "timeNearWall": 51.36018753051758,
-          "timeInCorner": 3.1330654621124268,
-          "timeOnWall": 51.36018753051758
-        },
-        "averages": {
-          "averageSpeed": 14936.5751953125,
-          "averageHitDistance": 2228.57958984375,
-          "averageDistanceFromCenter": 1598.4130859375
-        },
-        "hitCounts": {
-          "totalHits": 63,
-          "totalPasses": 10,
-          "totalSaves": 4,
-          "totalShots": 4,
-          "totalDribbles": 23,
-          "totalDribbleConts": 22,
-          "totalAerials": 11
-        },
-        "controller": {
-          "isKeyboard": false,
-          "analogueSteeringInputPercent": 1.5037593841552734,
-          "analogueThrottleInputPercent": 24.22723388671875
-        },
-        "speed": {
-          "timeAtSlowSpeed": 26.20292854309082,
-          "timeAtSuperSonic": 27.456701278686523,
-          "timeAtBoostSpeed": 170.17054748535156
-        },
-        "perPossessionStats": {
-          "averageCounts": {
-            "pass": 0.3076923191547394,
-            "passed": 0.23076923191547394,
-            "dribble": 1.7692307233810425,
-            "dribbleContinuation": 1.7692307233810425,
-            "shot": 0.38461539149284363,
-            "goal": 0.1538461595773697,
-            "assist": 0.07692307978868484,
-            "assisted": 0.07692307978868484,
-            "save": 0.07692307978868484,
-            "aerial": 0.692307710647583
-          },
-          "averageDuration": 6.528107166290283,
-          "averageHits": 3.923076868057251,
-          "count": 13
-        },
-        "ballCarries": {
-          "totalCarries": 1,
-          "longestCarry": 2.6470179557800293,
-          "furthestCarry": 2897.52099609375,
-          "totalCarryTime": 2.6470179557800293,
-          "averageCarryTime": 2.6470179557800293,
-          "fastestCarrySpeed": 14614.6513671875,
-          "totalCarryDistance": 2897.52099609375,
-          "carryStats": {
-            "averageZDistance": 157.59725952148438,
-            "averageXyDistance": 4629.71142578125,
-            "averageBallZVelocity": 363.1068420410156,
-            "varianceXyDistance": 2704378.25,
-            "varianceZDistance": 1665.894775390625,
-            "varianceBallZVelocity": 8935172.0,
-            "averageCarrySpeed": 14614.6513671875,
-            "distanceAlongPath": 3384.068359375
-          }
-        },
-        "kickoffStats": {
-          "totalKickoffs": 8,
-          "numTimeBoost": 3,
-          "numTimeGoToBall": 5,
-          "averageBoostUsed": 88.5
-        }
-      },
-      "isBot": false,
-      "timeInGame": 301.95220947265625,
-      "firstFrameInGame": 1
-    },
-    {
-      "id": {
-        "id": "76561197998946396"
-      },
-      "name": "Goose",
-      "titleId": 40,
-      "score": 403,
-      "goals": 1,
-      "assists": 1,
-      "saves": 2,
-      "shots": 1,
-      "cameraSettings": {
-        "stiffness": 1.0,
-        "height": 110.0,
-        "transitionSpeed": 1.7000000476837158,
-        "pitch": -4.0,
-        "swivelSpeed": 5.300000190734863,
-        "fieldOfView": 110.0,
-        "distance": 270.0
-      },
-      "loadout": {
-        "banner": 2507,
-        "boost": 32,
-        "car": 23,
-        "goalExplosion": 1903,
-        "skin": 0,
-        "trail": 1948,
-        "wheels": 386,
-        "version": 24,
-        "topper": 0,
-        "antenna": 0,
-        "engineAudio": 3244,
-        "primaryColor": 67,
-        "accentColor": 100,
-        "primaryFinish": 281,
-        "accentFinish": 270,
-        "avatarBorderUserColor": "4294942464"
-      },
-      "isOrange": 0,
-      "stats": {
-        "boost": {
-          "boostUsage": 2723.5997238878344,
-          "numSmallBoosts": 74,
-          "numLargeBoosts": 29,
-          "wastedCollection": 614.8284301757812,
-          "wastedUsage": 282.74847412109375,
-          "timeFullBoost": 7.885284423828125,
-          "timeLowBoost": 94.04911804199219,
-          "timeNoBoost": 31.91986846923828,
-          "numStolenBoosts": 2,
-          "averageBoostLevel": 108.67860412597656,
-          "wastedBig": 600.3186645507812,
-          "wastedSmall": 14.509803771972656
-        },
-        "distance": {
-          "ballHitForward": 45754.70936584473,
-          "ballHitBackward": 1850.1199254989624,
-          "timeClosestToBall": 56.61996078491211,
-          "timeFurthestFromBall": 74.6428451538086,
-          "timeCloseToBall": 23.549484252929688
-        },
-        "possession": {
-          "possessionTime": 44.083983526,
-          "turnovers": 9,
-          "turnoversOnMyHalf": 4,
-          "turnoversOnTheirHalf": 3,
-          "wonTurnovers": 3
-        },
-        "positionalTendencies": {
-          "timeOnGround": 165.9819793701172,
-          "timeLowInAir": 114.47247314453125,
-          "timeHighInAir": 4.427058696746826,
-          "timeInDefendingHalf": 217.44253540039062,
-          "timeInAttackingHalf": 81.43206024169922,
-          "timeInDefendingThird": 152.05332946777344,
-          "timeInNeutralThird": 107.27494049072266,
-          "timeInAttackingThird": 39.54633331298828,
-          "timeBehindBall": 213.84251403808594,
-          "timeInFrontBall": 85.03207397460938,
-          "timeNearWall": 78.86226654052734,
-          "timeInCorner": 2.455801010131836,
-          "timeOnWall": 78.86226654052734
-        },
-        "averages": {
-          "averageSpeed": 14548.74609375,
-          "averageHitDistance": 2192.516357421875,
-          "averageDistanceFromCenter": 1684.969482421875
-        },
-        "hitCounts": {
-          "totalHits": 26,
-          "totalPasses": 3,
-          "totalSaves": 1,
-          "totalShots": 1,
-          "totalDribbles": 4,
-          "totalDribbleConts": 5,
-          "totalAerials": 4
-        },
-        "controller": {
-          "isKeyboard": false,
-          "analogueSteeringInputPercent": 15.717865943908691,
-          "analogueThrottleInputPercent": 28.52368927001953
-        },
-        "speed": {
-          "timeAtSlowSpeed": 35.106075286865234,
-          "timeAtSuperSonic": 30.76183319091797,
-          "timeAtBoostSpeed": 167.74752807617188
-        },
-        "perPossessionStats": {
-          "averageCounts": {
-            "pass": 0.25,
-            "passed": 0.5,
-            "dribble": 1.0,
-            "dribbleContinuation": 1.0,
-            "shot": 0.0,
-            "goal": 0.0,
-            "assist": 0.0,
-            "assisted": 0.0,
-            "save": 0.0,
-            "aerial": 0.25
-          },
-          "averageDuration": 4.145057201385498,
-          "averageHits": 2.25,
-          "count": 4
-        },
-        "kickoffStats": {
-          "totalKickoffs": 8,
-          "numTimeCheat": 1,
-          "numTimeGoToBall": 3,
-          "numTimeFirstTouch": 3,
-          "averageBoostUsed": 55.3540153503418
-        }
-      },
-      "partyLeader": {
-        "id": "76561197998946396"
-      },
-      "isBot": false,
-      "timeInGame": 298.8746032714844,
-      "firstFrameInGame": 1
     }
   ],
   "teams": [
@@ -663,9 +369,6 @@
       "playerIds": [
         {
           "id": "76561198201106927"
-        },
-        {
-          "id": "76561198162373110"
         }
       ],
       "score": 6,
@@ -714,9 +417,6 @@
       "playerIds": [
         {
           "id": "76561197998946396"
-        },
-        {
-          "id": "76561198278750872"
         }
       ],
       "score": 2,
@@ -3931,10 +3631,7 @@
                 "posZ": 97.41000366210938
               },
               "boost": 11.197247505187988,
-              "jumps": [
-                2.0465025901794434,
-                2.1530377864837646
-              ],
+              "jumps": [2.0465025901794434, 2.1530377864837646],
               "ballDist": 542.9832153320312,
               "startLeft": false,
               "startPosition": {
@@ -3956,9 +3653,7 @@
               },
               "boost": 36.43848419189453,
               "jumps": [
-                0.758009672164917,
-                0.8677681088447571,
-                2.1139183044433594,
+                0.758009672164917, 0.8677681088447571, 2.1139183044433594,
                 2.229475259780884
               ],
               "ballDist": 239.43045043945312,
@@ -3981,10 +3676,7 @@
                 "posZ": 16.850000381469727
               },
               "boost": 255.0,
-              "jumps": [
-                0.903553307056427,
-                0.9733738899230957
-              ],
+              "jumps": [0.903553307056427, 0.9733738899230957],
               "ballDist": 5074.04150390625,
               "boostTime": 2.1908230781555176,
               "startLeft": false,
@@ -4061,9 +3753,7 @@
               },
               "boost": 22.824214935302734,
               "jumps": [
-                0.6489176154136658,
-                0.7565097808837891,
-                2.0850071907043457,
+                0.6489176154136658, 0.7565097808837891, 2.0850071907043457,
                 2.1609466075897217
               ],
               "ballDist": 174.8671417236328,
@@ -4087,9 +3777,7 @@
               },
               "boost": 54.0,
               "jumps": [
-                0.6489176154136658,
-                0.7565097808837891,
-                1.9726682901382446,
+                0.6489176154136658, 0.7565097808837891, 1.9726682901382446,
                 2.0850071907043457
               ],
               "ballDist": 307.90234375,
@@ -4167,9 +3855,7 @@
               },
               "boost": 0.0,
               "jumps": [
-                0.32159990072250366,
-                0.4313555061817169,
-                1.861519455909729,
+                0.32159990072250366, 0.4313555061817169, 1.861519455909729,
                 1.9367903470993042
               ],
               "ballDist": 272.6679382324219,
@@ -4193,9 +3879,7 @@
               },
               "boost": 27.0,
               "jumps": [
-                0.5394390225410461,
-                0.6457411050796509,
-                1.8987480401992798,
+                0.5394390225410461, 0.6457411050796509, 1.8987480401992798,
                 1.9741358757019043
               ],
               "ballDist": 640.5975341796875,
@@ -4252,10 +3936,7 @@
                 "posZ": 17.049999237060547
               },
               "boost": 255.0,
-              "jumps": [
-                0.5313773155212402,
-                0.5666258931159973
-              ],
+              "jumps": [0.5313773155212402, 0.5666258931159973],
               "ballDist": 5044.5302734375,
               "boostTime": 1.8533010482788086,
               "startLeft": true,
@@ -4277,10 +3958,7 @@
                 "posZ": 17.049999237060547
               },
               "boost": 255.0,
-              "jumps": [
-                0.46083611249923706,
-                0.5313773155212402
-              ],
+              "jumps": [0.46083611249923706, 0.5313773155212402],
               "ballDist": 5131.06396484375,
               "boostTime": 1.9258296489715576,
               "startLeft": false,
@@ -4302,10 +3980,7 @@
                 "posZ": 123.62999725341797
               },
               "boost": 24.0,
-              "jumps": [
-                0.5666258931159973,
-                0.7031875252723694
-              ],
+              "jumps": [0.5666258931159973, 0.7031875252723694],
               "ballDist": 592.414794921875,
               "startLeft": false,
               "startPosition": {
@@ -4327,9 +4002,7 @@
               },
               "boost": 0.0,
               "jumps": [
-                0.46083611249923706,
-                0.5313773155212402,
-                1.9258296489715576,
+                0.46083611249923706, 0.5313773155212402, 1.9258296489715576,
                 1.9979908466339111
               ],
               "ballDist": 171.12799072265625,
@@ -4366,10 +4039,7 @@
                 "posZ": 93.30999755859375
               },
               "boost": 0.0,
-              "jumps": [
-                1.7305389642715454,
-                1.8027483224868774
-              ],
+              "jumps": [1.7305389642715454, 1.8027483224868774],
               "ballDist": 532.9786987304688,
               "startLeft": false,
               "startPosition": {
@@ -4410,10 +4080,7 @@
                 "posZ": 33.810001373291016
               },
               "boost": 13.0,
-              "jumps": [
-                0.932393491268158,
-                0.9664815068244934
-              ],
+              "jumps": [0.932393491268158, 0.9664815068244934],
               "ballDist": 4758.38671875,
               "boostTime": 2.351515054702759,
               "startLeft": false,
@@ -4436,9 +4103,7 @@
               },
               "boost": 0.0,
               "jumps": [
-                0.4152950048446655,
-                0.5200716257095337,
-                1.9113713502883911,
+                0.4152950048446655, 0.5200716257095337, 1.9113713502883911,
                 1.9844639301300049
               ],
               "ballDist": 158.85708618164062,
@@ -4475,10 +4140,7 @@
                 "posZ": 98.77999877929688
               },
               "boost": 1.0317423343658447,
-              "jumps": [
-                2.079942464828491,
-                2.185957908630371
-              ],
+              "jumps": [2.079942464828491, 2.185957908630371],
               "ballDist": 328.34942626953125,
               "startLeft": false,
               "startPosition": {
@@ -4499,10 +4161,7 @@
                 "posZ": 17.049999237060547
               },
               "boost": 255.0,
-              "jumps": [
-                0.8433657288551331,
-                0.915519118309021
-              ],
+              "jumps": [0.8433657288551331, 0.915519118309021],
               "ballDist": 5159.9921875,
               "boostTime": 2.220848321914673,
               "startLeft": false,
@@ -4524,10 +4183,7 @@
                 "posZ": 16.989999771118164
               },
               "boost": 255.0,
-              "jumps": [
-                0.9534397721290588,
-                0.9909207224845886
-              ],
+              "jumps": [0.9534397721290588, 0.9909207224845886],
               "ballDist": 4995.2841796875,
               "boostTime": 2.362867593765259,
               "startLeft": false,
@@ -4549,10 +4205,7 @@
                 "posZ": 88.62000274658203
               },
               "boost": 3.8321378231048584,
-              "jumps": [
-                2.1503660678863525,
-                2.2558176517486572
-              ],
+              "jumps": [2.1503660678863525, 2.2558176517486572],
               "ballDist": 209.31117248535156,
               "startLeft": false,
               "startPosition": {
@@ -4587,10 +4240,7 @@
                 "posZ": 17.049999237060547
               },
               "boost": 116.0,
-              "jumps": [
-                0.1052229031920433,
-                0.14011119306087494
-              ],
+              "jumps": [0.1052229031920433, 0.14011119306087494],
               "ballDist": 3233.046630859375,
               "startLeft": false,
               "startPosition": {
@@ -4612,9 +4262,7 @@
               },
               "boost": 15.42386245727539,
               "jumps": [
-                0.764306902885437,
-                0.8712857961654663,
-                2.077104330062866,
+                0.764306902885437, 0.8712857961654663, 2.077104330062866,
                 2.1906840801239014
               ],
               "ballDist": 114.14163208007812,
@@ -4638,9 +4286,7 @@
               },
               "boost": 47.0,
               "jumps": [
-                0.7282490730285645,
-                0.8712857961654663,
-                2.077104330062866,
+                0.7282490730285645, 0.8712857961654663, 2.077104330062866,
                 2.1906840801239014
               ],
               "ballDist": 467.0775146484375,
@@ -4663,10 +4309,7 @@
                 "posZ": 16.860000610351562
               },
               "boost": 109.0,
-              "jumps": [
-                0.764306902885437,
-                0.8353133201599121
-              ],
+              "jumps": [0.764306902885437, 0.8353133201599121],
               "ballDist": 2870.276123046875,
               "startLeft": true,
               "startPosition": {
@@ -4701,9 +4344,7 @@
                 "posZ": 17.049999237060547
               },
               "boost": 62.0,
-              "jumps": [
-                2.8429901599884033
-              ],
+              "jumps": [2.8429901599884033],
               "ballDist": 2745.258056640625,
               "startLeft": true,
               "startPosition": {
@@ -4725,9 +4366,7 @@
               },
               "boost": 0.0,
               "jumps": [
-                0.3635500967502594,
-                0.47266969084739685,
-                1.8757091760635376,
+                0.3635500967502594, 0.47266969084739685, 1.8757091760635376,
                 2.066431999206543
               ],
               "ballDist": 184.7208251953125,
@@ -4751,9 +4390,7 @@
               },
               "boost": 33.0,
               "jumps": [
-                0.5433546900749207,
-                0.6893054842948914,
-                1.837780475616455,
+                0.5433546900749207, 0.6893054842948914, 1.837780475616455,
                 1.989471435546875
               ],
               "ballDist": 469.54962158203125,

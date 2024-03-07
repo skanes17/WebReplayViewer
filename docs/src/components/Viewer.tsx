@@ -38,7 +38,7 @@ export default class Viewer extends Component<Props, State> {
       <Grid
         container
         sx={{
-          "&& > div:nth-child(even)": {
+          "&& > div:nth-of-type(even)": {
             backgroundColor: "rgba(0, 0, 0, 0.05)",
           },
         }}
@@ -87,4 +87,3 @@ export default class Viewer extends Component<Props, State> {
     )
   }
 }
-

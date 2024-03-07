@@ -38,7 +38,7 @@ const defaultAnimationBuilder = (
   replayData: ReplayData,
   playerModels: PlayerManager[],
   ballModel: BallManager,
-  useBallRotation: boolean = true,
+  useBallRotation: boolean = true
 ): AnimationManager => {
   /**
    * Replay data is of this form:
@@ -53,72 +53,62 @@ const defaultAnimationBuilder = (
    */
   const dataToVector = (data: any[]) => {
     const x = data[0]
-    const y = data[2]
     const z = data[1]
+    const y = data[2]
     return new Vector3(x, y, z)
   }
   const dataToQuaternion = (data: any[]) => {
     const q = new Quaternion()
-    const x = -data[3]
-    const y = -data[5]
-    const z = -data[4]
-    q.setFromEuler(new Euler(y, z, x, "YZX"))
+    const x = data[3] // ** is made neg to reverse the RL angle sign convention
+    const y = -data[4]
+    const z = data[5]
+    q.setFromEuler(new Euler(z, y, x, "ZYX")) // ! Possibly messed up order or signs
     return q
   }
   const generateKeyframeData = (posRotData: any[]): KeyframeData => {
     const positions: number[] = []
     const rotations: number[] = []
-    /**
-     * We are calculating vector and quaternion times independently because there are often
-     * cases where the data of a frame might coincide with the data of the next frame. The
-     * replays may not contain data for every frame, so carball inserts the previous frame
-     * data into the following frame as to avoid any missing frames. Here, we assume the
-     * entire duration of that missing frame must be animated.
-     *
-     * For example, if a car's position at 1.1 seconds reads (45, 100, 500), at 1.2 seconds
-     * reads (45, 100, 500), and at 1.3 seconds reads (50, 110, 400), we can assume the
-     * middle frame was skipped and so we need to perform animation between 1.1 seconds and
-     * 1.3 seconds instead of including the jitter of the car remaining in position from 1.1
-     * seconds to 1.2 seconds.
-     *
-     * We perform the second duration vs. last frame calculation check because we consider
-     * kickoffs as a valid reason to not treat the first position traveled to as a valid
-     * three second animation. Otherwise, the car will slowly creep forward during kickoff.
-     * A kickoff occurs for about three seconds, so 2.9 ensures we break off just before a
-     * kickoff occurs.
-     */
+
     let totalDuration = 0
     const positionTimes: number[] = []
     const rotationTimes: number[] = []
-    let prevVector = new Vector3(0, 0, 0)
-    let prevQuat = new Quaternion(0, 0, 0, 0)
+
+    // !! NOTE: This is where posRotData gets converted!
+
     posRotData.forEach((data, index) => {
-      // Apply position frame
-      const newVector = dataToVector(data)
-      const lastVectorFrame = positionTimes.length
-        ? positionTimes[positionTimes.length - 1]
-        : 0
-      if (
-        !newVector.equals(prevVector) ||
-        totalDuration - lastVectorFrame > 2.9
-      ) {
-        newVector.toArray(positions, positions.length)
-        positionTimes.push(totalDuration)
-        prevVector = newVector
-      }
-      // Apply rotation frame
-      const newQuat = dataToQuaternion(data)
-      const lastQuatFrame = rotationTimes.length
-        ? rotationTimes[rotationTimes.length - 1]
-        : 0
-      if (!newQuat.equals(prevQuat) || totalDuration - lastQuatFrame > 2.9) {
-        newQuat.toArray(rotations, rotations.length)
-        rotationTimes.push(totalDuration)
-        prevQuat = newQuat
-      }
+      const pos_x = -data[0] // ! Possibly messed up order or signs
+      const pos_z = data[1]
+      const pos_y = data[2]
+      positions.push(pos_x, pos_y, pos_z) // x, y, z
+
+      const rot_x = -data[3] // ! Possibly messed up order or signs
+      const rot_z = -data[4]
+      const rot_y = -data[5]
+
+      const q = new Quaternion()
+      q.setFromEuler(new Euler(rot_x, rot_z, rot_y))
+      rotations.push(q.x, q.y, q.z, q.w)
+
+      positionTimes.push(totalDuration)
+      rotationTimes.push(totalDuration)
+
       // Add the delta
       totalDuration += replayData.frames[index][0]
+
+      // // Apply position frame
+      // const newVector = dataToVector(data)
+      // newVector.toArray(positions, positions.length)
+
+      // // Apply rotation frame
+      // const newQuat = dataToQuaternion(data)
+      // newQuat.toArray(rotations, rotations.length)
     })
+
+    console.log("positionTimes", positionTimes)
+    console.log("positions", positions)
+    console.log("rotationTimes", rotationTimes)
+    console.log("rotations", rotations)
+    console.log("totalDuration", totalDuration)
 
     return {
       duration: totalDuration,
@@ -131,7 +121,8 @@ const defaultAnimationBuilder = (
 
   const playerClips = []
   // First, generate player clips
-  for (let player = 0; player < replayData.players.length; player++) {
+  for (let player = 0; player < 2; player++) {
+    // ! NOTE: Hardcoded player number to 2 for now
     const playerData = replayData.players[player]
     const playerName = `${replayData.names[player]}`
     const playerKeyframeData = generateKeyframeData(playerData)
@@ -173,12 +164,14 @@ const defaultAnimationBuilder = (
   const ballClip = new AnimationClip(
     getActionClipName(BALL),
     ballKeyframeData.duration,
-    useBallRotation ? [ballPosKeyframes, ballRotKeyframes] : [ballPosKeyframes],
+    useBallRotation ? [ballPosKeyframes, ballRotKeyframes] : [ballPosKeyframes]
   )
   return AnimationManager.init({
     playerClips,
     ballClip,
-    playerMixers: playerModels.map(model => new AnimationMixer(model.carGroup)),
+    playerMixers: playerModels.map(
+      (model) => new AnimationMixer(model.carGroup)
+    ),
     ballMixer: new AnimationMixer(ballModel.ball),
   })
 }

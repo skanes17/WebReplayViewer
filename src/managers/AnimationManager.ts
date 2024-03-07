@@ -27,6 +27,11 @@ export default class AnimationManager {
     ballClip,
     ballMixer,
   }: AnimationManagerOptions) {
+    console.log("Player Mixers:", playerMixers)
+    console.log("Player Clips:", playerClips)
+    console.log("Ball Mixer:", ballMixer)
+    console.log("Ball Clip:", ballClip)
+
     this.actions = {} as any
 
     this.mixers = {
@@ -36,9 +41,13 @@ export default class AnimationManager {
 
     // Build the player actions
     this.actions.players = []
-    for (let player = 0; player < playerClips.length; player++) {
+    for (let player = 0; player < 2; player++) {
+      // ! NOTE: Hardcoded player number to 2 for now
       const clip = playerClips[player]
+      console.log("Clip:", clip)
       const mixer = this.mixers.players[player]
+      console.log("Mixer:", mixer)
+
       this.actions.players[player] = mixer.clipAction(clip)
     }
     // Build the ball action
@@ -47,13 +56,13 @@ export default class AnimationManager {
 
   public playAnimationClips() {
     const { players, ball } = this.actions
-    players.forEach(action => action.play())
+    players.forEach((action) => action.play())
     ball.play()
   }
 
   public updateAnimationClips(delta: number) {
     const { players, ball } = this.mixers
-    players.forEach(player => player.update(delta))
+    players.forEach((player) => player.update(delta))
     ball.update(delta)
   }
 
