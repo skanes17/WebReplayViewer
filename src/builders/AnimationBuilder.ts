@@ -76,17 +76,17 @@ const defaultAnimationBuilder = (
     // !! NOTE: This is where posRotData gets converted!
 
     posRotData.forEach((data, index) => {
-      const pos_x = -data[0] // ! Possibly messed up order or signs
+      const pos_x = data[0] // ! Possibly messed up order or signs
       const pos_z = data[1]
       const pos_y = data[2]
       positions.push(pos_x, pos_y, pos_z) // x, y, z
 
-      const rot_x = -data[3] // ! Possibly messed up order or signs
-      const rot_z = -data[4]
-      const rot_y = -data[5]
+      const rot_x = data[3] // ! Possibly messed up order or signs
+      const rot_y = data[4]
+      const rot_z = data[5]
 
       const q = new Quaternion()
-      q.setFromEuler(new Euler(rot_x, rot_z, rot_y))
+      q.setFromEuler(new Euler(rot_x, rot_y, rot_z))
       rotations.push(q.x, q.y, q.z, q.w)
 
       positionTimes.push(totalDuration)
@@ -126,6 +126,10 @@ const defaultAnimationBuilder = (
     const playerData = replayData.players[player]
     const playerName = `${replayData.names[player]}`
     const playerKeyframeData = generateKeyframeData(playerData)
+
+    console.log("Player Keyframe Data:", playerKeyframeData)
+    console.log("Player Name:", playerName)
+    console.log("Player Data:", playerData)
 
     // Note that Three.JS requires this .position/.quaternion naming convention, and that
     // the object we wish to modify must have this associated name.
